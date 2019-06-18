@@ -24,7 +24,7 @@ document.getElementById("losses").innerText = loss;
 let score = 0;
 document.getElementById("score").innerText = score;
 
-const sound = new Audio("../assets/cash.mov");
+const sound = new Audio("../assets/cash.mp3");
 
 
 function getRandInt(min, max) {
