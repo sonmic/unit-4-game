@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="" />
+    <title>Macarons Collector</title>
+    <!-- Bootstrap CDN -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <!-- Linking CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Linking Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Ropa+Sans|Shrikhand|Julius+Sans+One|Quicksand&display=swap" rel="stylesheet">
+    <!-- Linking jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Linking jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <H1>Cafe Macaron</H1>
+        <!-- <span class="instructions">You will be given a random number at the start of the game.</span> -->
+        <p>Eat macarons and match this price!</p><br>
+        <span id="goal"></span><br><br>
+        <p>Wins: <span id="wins"></span></p>
+        <p>Loses: <span id="losses"></span></p>
+        <p>Total price: $<span id="score"></span></p>
+
+        <div class="flex-container" id="macbox">
+            <!-- this content is hide, need jQuery to fade in -->
+            <img class="yum mac1" src="assets/images/mac1.png">
+            <img class="yum mac2" src="assets/images/mac2.png">
+            <img class="yum mac3" src="assets/images/mac3.png">
+            <img class="yum mac4" src="assets/images/mac4.png">
+        </div>
+        <!-- Linking JavaScript file -->
+        <script type="text/javascript " src="assets/javascript/game.js "></script>
+    </div>
+</body>
+
+</html>

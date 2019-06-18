@@ -1,0 +1,81 @@
+.macbox {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    flex-wrap: nowrap;
+    display: inline-block;
+}
+
+img {
+    /* object-fit: scale-down; */
+}
+
+h1 {
+    font-family: Lobster;
+    font-size: 70px;
+    color: #fbfdee;
+    text-shadow: 2px 2px #96b6b5;
+}
+
+body {
+    font-family: Lobster;
+    color: #9aa9c0;
+    font-size: 30px;
+    background-color: #d0e0e0;
+    display: flex;
+    text-align: center
+}
+
+p {
+    padding: 10px;
+}
+
+.instructions {
+    font-family: Julius Sans One;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    margin: auto;
+}
+
+#goal {
+    font-size: 60px;
+    color: #fbfdee;
+    text-shadow: 2px 2px #96b6b5;
+    background: #e7e8e2;
+    border-radius: 50%;
+    padding: 30px 30 30 30;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 48px;
+    }
+    p {
+        padding: 5px;
+        font-size: 30px;
+    }
+    .instructions {
+        font-family: Ropa Sans;
+        font-size: 20px;
+        /* font-weight: bold; */
+    }
+    img {
+        height: 150px;
+        width: 150px;
+        flex-wrap: nowrap;
+        display: inline-block;
+    }
+    .container {
+        padding: 2%;
+    }
+    .flex-container {
+        text-align: center
+    }
+}
