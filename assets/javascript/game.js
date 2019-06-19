@@ -1,3 +1,11 @@
+// global variables
+let wins = 0;
+document.getElementById("wins").innerText = wins;
+let losses = 0;
+document.getElementById("losses").innerText = losses;
+let score = 0;
+document.getElementById("score").innerText = score;
+
 // Default macarons animation
 
 var calvin;
@@ -23,25 +31,24 @@ $(document).ready(function() {
 });
 
 
-// global variables
-let win = 0;
-document.getElementById("wins").innerText = win;
-let loss = 0;
-document.getElementById("losses").innerText = loss;
-let score = 0;
-document.getElementById("score").innerText = score;
-
-//const sound = new Audio("assets/cash.mp3");
-
 
 function getRandInt(min, max) {
     return min + Math.floor(Math.random() * (max - min + 1));;
 }
+
+let targetNum;
 // computer picks a random number
-let goalNum = getRandInt(19, 120);
-console.log(goalNum);
-// display and log the computer picked number
-$('#goal').text('\$' + goalNum);
+function goalNum() {
+    targetNum = getRandInt(19, 120);
+    console.log(targetNum);
+    // display and log the computer picked number
+    $('#goal').text('\$' + targetNum);
+}
+goalNum();
+
+// generates random macaron number
+let macNum = getRandInt(1, 12);
+
 
 // macaron #1  gets a number assinged
 let macOne = getRandInt(1, 12);
@@ -106,3 +113,24 @@ $("#mute").click(function() {
         $(this).prop("src", "assets/images/soundon.png");
     }
 });
+
+
+
+$('.yum').on('click', function() {
+    let totalScore = parseInt($("#score").text(), 10);
+    console.log($("#score").text());
+    if (totalScore === targetNum) {
+        document.getElementById("wins").innerText = ++wins;
+        reset();
+    } else if (totalScore > targetNum) {
+        document.getElementById("losses").innerText = ++losses;
+        reset();
+    }
+});
+
+//reset 
+function reset() {
+    goalNum();
+    score = 0;
+    $("#score").text(score);
+}
