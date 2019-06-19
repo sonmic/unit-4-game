@@ -4,9 +4,8 @@ var calvin;
 
 $(document).ready(function() {
 
-    calvin = document.createElement('audio');
-    calvin.src = 'assets/cash.mp3'
-    calvin.play();
+    calvin = new Audio();
+    calvin.src = 'assets/cash.mp3';
 
     $(".mac1").effect("bounce", { times: 2 }, 1000);
 
@@ -68,32 +67,26 @@ $('.mac4').attr('data', macFour);
 
 // add macaron #1 num to total
 $('.mac1').on('click', function() {
-    $('.mac1').each(function() {
-        let value = $('.mac1').attr('data');
-        score = score + parseInt(value, 10);
-        $("#score").text(score);
-        $('.mac1').click(e => calvin.play());
-    });
+    let value = $('.mac1').attr('data');
+    score = score + parseInt(value, 10);
+    $("#score").text(score);
+    calvin.play();
 });
 
 // add macaron #2 num to total
 $('.mac2').on('click', function() {
-    $('.mac2').each(function() {
-        let value = $('.mac2').attr('data');
-        score = score + parseInt(value, 10);
-        $("#score").text(score);
-        $('.mac2').click(e => calvin.play());
-    });
+    let value = $('.mac2').attr('data');
+    score = score + parseInt(value, 10);
+    $("#score").text(score);
+    calvin.play();
 });
 
 // add macaron #3 num to total
 $('.mac3').on('click', function() {
-    $('.mac3').each(function() {
-        let value = $('.mac3').attr('data');
-        score = score + parseInt(value, 10);
-        $("#score").text(score);
-        $('.mac3').click(e => calvin.play());
-    });
+    let value = $('.mac3').attr('data');
+    score = score + parseInt(value, 10);
+    $("#score").text(score);
+    calvin.play();
 });
 
 // add macaron #4 num to total
@@ -101,8 +94,7 @@ $('.mac4').on('click', function() {
     let value = $('.mac4').attr('data');
     score = score + parseInt(value, 10);
     $("#score").text(score);
-    $('.mac4').click(e => calvin.play());
-
+    calvin.play();
 });
 
 $("#mute").click(function() {

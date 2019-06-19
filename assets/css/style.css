@@ -65,11 +65,11 @@ p {
     }
     p {
         padding: 5px;
-        font-size: 30px;
+        font-size: 25px;
     }
     .instructions {
         font-family: Ropa Sans;
-        font-size: 20px;
+        font-size: 15px;
         /* font-weight: bold; */
     }
     .yum {
