@@ -64,12 +64,12 @@ p {
         font-size: 48px;
     }
     p {
-        padding: 5px;
-        font-size: 25px;
+        padding: 3px;
+        font-size: 23px;
     }
     .instructions {
         font-family: Ropa Sans;
-        font-size: 15px;
+        font-size: 10px;
         /* font-weight: bold; */
     }
     .yum {
@@ -83,5 +83,8 @@ p {
     }
     .flex-container {
         text-align: center
+    }
+    #goal {
+        padding: 0px auto;
     }
 }
