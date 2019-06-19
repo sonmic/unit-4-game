@@ -5,7 +5,7 @@ var calvin;
 $(document).ready(function() {
 
     calvin = document.createElement('audio');
-    calvin.src = '../assets/cash.mp3'
+    calvin.src = 'assets/cash.mp3'
     calvin.play();
 
     $(".mac1").effect("bounce", { times: 2 }, 1000);
@@ -32,7 +32,7 @@ document.getElementById("losses").innerText = loss;
 let score = 0;
 document.getElementById("score").innerText = score;
 
-//const sound = new Audio("../assets/cash.mp3");
+//const sound = new Audio("assets/cash.mp3");
 
 
 function getRandInt(min, max) {
