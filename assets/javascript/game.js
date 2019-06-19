@@ -1,5 +1,13 @@
 // Default macarons animation
+
+var calvin;
+
 $(document).ready(function() {
+
+    calvin = document.createElement('audio');
+    calvin.src = '../assets/cash.mp3'
+    calvin.play();
+
     $(".mac1").effect("bounce", { times: 2 }, 1000);
 
     window.setTimeout(function() {
@@ -24,7 +32,7 @@ document.getElementById("losses").innerText = loss;
 let score = 0;
 document.getElementById("score").innerText = score;
 
-const sound = new Audio("../assets/cash.mp3");
+//const sound = new Audio("../assets/cash.mp3");
 
 
 function getRandInt(min, max) {
@@ -64,7 +72,7 @@ $('.mac1').on('click', function() {
         let value = $('.mac1').attr('data');
         score = score + parseInt(value, 10);
         $("#score").text(score);
-        $('.mac1').click(e => sound.play());
+        $('.mac1').click(e => calvin.play());
     });
 });
 
@@ -74,7 +82,7 @@ $('.mac2').on('click', function() {
         let value = $('.mac2').attr('data');
         score = score + parseInt(value, 10);
         $("#score").text(score);
-        $('.mac2').click(e => sound.play());
+        $('.mac2').click(e => calvin.play());
     });
 });
 
@@ -84,7 +92,7 @@ $('.mac3').on('click', function() {
         let value = $('.mac3').attr('data');
         score = score + parseInt(value, 10);
         $("#score").text(score);
-        $('.mac3').click(e => sound.play());
+        $('.mac3').click(e => calvin.play());
     });
 });
 
@@ -93,6 +101,16 @@ $('.mac4').on('click', function() {
     let value = $('.mac4').attr('data');
     score = score + parseInt(value, 10);
     $("#score").text(score);
-    $('.mac4').click(e => sound.play());
+    $('.mac4').click(e => calvin.play());
 
+});
+
+$("#mute").click(function() {
+    if (calvin.muted == false) {
+        calvin.muted = true;
+        $(this).prop("src", "assets/images/soundoff.png");
+    } else {
+        calvin.muted = false;
+        $(this).prop("src", "assets/images/soundon.png");
+    }
 });
