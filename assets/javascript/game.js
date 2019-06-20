@@ -8,12 +8,12 @@ document.getElementById("score").innerText = score;
 
 // Default macarons animation
 
-var calvin;
+var cashSound;
 
 $(document).ready(function() {
 
-    calvin = new Audio();
-    calvin.src = 'assets/cash.mp3';
+    cashSound = new Audio();
+    cashSound.src = 'assets/cash.mp3';
 
     $(".mac1").effect("bounce", { times: 2 }, 1000);
 
@@ -46,38 +46,37 @@ function goalNum() {
 }
 goalNum();
 
-// generates random macaron number
-let macNum = getRandInt(1, 12);
 
 
-// macaron #1  gets a number assinged
-let macOne = getRandInt(1, 12);
-console.log(macOne);
-$('.mac1').attr('data', macOne);
+function macNum() {
+    // macaron #1  gets a number assinged
+    let macOne = getRandInt(1, 12);
+    console.log(macOne);
+    $('.mac1').attr('data', macOne);
 
+    // macaron #2  gets a number assinged
+    let macTwo = getRandInt(1, 12);
+    console.log(macTwo);
+    $('.mac2').attr('data', macTwo);
 
-// macaron #2  gets a number assinged
-let macTwo = getRandInt(1, 12);
-console.log(macTwo);
-$('.mac2').attr('data', macTwo);
+    // macaron #3  gets a number assinged
+    let macThree = getRandInt(1, 12);
+    console.log(macThree);
+    $('.mac3').attr('data', macThree);
 
-// macaron #3  gets a number assinged
-let macThree = getRandInt(1, 12);
-console.log(macThree);
-$('.mac3').attr('data', macThree);
-
-// macaron #4  gets a number assinged
-let macFour = getRandInt(1, 12);
-console.log(macFour);
-$('.mac4').attr('data', macFour);
-
+    // macaron #4  gets a number assinged
+    let macFour = getRandInt(1, 12);
+    console.log(macFour);
+    $('.mac4').attr('data', macFour);
+}
+macNum();
 
 // add macaron #1 num to total
 $('.mac1').on('click', function() {
     let value = $('.mac1').attr('data');
     score = score + parseInt(value, 10);
     $("#score").text(score);
-    calvin.play();
+    cashSound.play();
 });
 
 // add macaron #2 num to total
@@ -85,7 +84,7 @@ $('.mac2').on('click', function() {
     let value = $('.mac2').attr('data');
     score = score + parseInt(value, 10);
     $("#score").text(score);
-    calvin.play();
+    cashSound.play();
 });
 
 // add macaron #3 num to total
@@ -93,7 +92,7 @@ $('.mac3').on('click', function() {
     let value = $('.mac3').attr('data');
     score = score + parseInt(value, 10);
     $("#score").text(score);
-    calvin.play();
+    cashSound.play();
 });
 
 // add macaron #4 num to total
@@ -101,15 +100,15 @@ $('.mac4').on('click', function() {
     let value = $('.mac4').attr('data');
     score = score + parseInt(value, 10);
     $("#score").text(score);
-    calvin.play();
+    cashSound.play();
 });
 
 $("#mute").click(function() {
-    if (calvin.muted == false) {
-        calvin.muted = true;
+    if (cashSound.muted == false) {
+        cashSound.muted = true;
         $(this).prop("src", "assets/images/soundoff.png");
     } else {
-        calvin.muted = false;
+        cashSound.muted = false;
         $(this).prop("src", "assets/images/soundon.png");
     }
 });
@@ -131,6 +130,7 @@ $('.yum').on('click', function() {
 //reset 
 function reset() {
     goalNum();
+    macNum();
     score = 0;
     $("#score").text(score);
 }
