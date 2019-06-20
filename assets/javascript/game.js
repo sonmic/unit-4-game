@@ -1,10 +1,10 @@
 // global variables
 let wins = 0;
-document.getElementById("wins").innerText = wins;
+$('#wins').text(wins);
 let losses = 0;
-document.getElementById("losses").innerText = losses;
+$('#losses').text(losses);
 let score = 0;
-document.getElementById("score").innerText = score;
+$('#score').text(score);
 
 // Default macarons animation
 
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 
 function getRandInt(min, max) {
-    return min + Math.floor(Math.random() * (max - min + 1));;
+    return min + Math.floor(Math.random() * (max - min + 1));
 }
 
 let targetNum;
@@ -119,10 +119,10 @@ $('.yum').on('click', function() {
     let totalScore = parseInt($("#score").text(), 10);
     console.log($("#score").text());
     if (totalScore === targetNum) {
-        document.getElementById("wins").innerText = ++wins;
+        $("#wins").text(++wins);
         reset();
     } else if (totalScore > targetNum) {
-        document.getElementById("losses").innerText = ++losses;
+        $("#losses").text(++losses);
         reset();
     }
 });
