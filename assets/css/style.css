@@ -1,90 +1,92 @@
 .macbox {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .yum {
-    height: 200px;
-    width: 200px;
-    flex-wrap: nowrap;
-    display: inline-block;
+  height: 200px;
+  width: 200px;
+  flex-wrap: nowrap;
+  display: inline-block;
 }
 
 img {
-    /* object-fit: scale-down; */
+  /* object-fit: scale-down; */
 }
 
 h1 {
-    font-family: Lobster;
-    font-size: 70px;
-    color: #fbfdee;
-    text-shadow: 2px 2px #96b6b5;
+  font-family: Lobster;
+  font-size: 70px;
+  color: #fbfdee;
+  text-shadow: 2px 2px #96b6b5;
 }
 
 body {
-    font-family: Lobster;
-    color: #9aa9c0;
-    font-size: 30px;
-    background-color: #d0e0e0;
-    display: flex;
-    text-align: center
+  font-family: Lobster;
+  color: #9aa9c0;
+  font-size: 30px;
+  background-color: #d0e0e0;
+  display: flex;
+  text-align: center;
 }
 
 p {
-    padding: 10px;
+  padding: 10px;
 }
 
 .instructions {
-    font-family: Julius Sans One;
-    font-size: 20px;
-    font-weight: bold;
+  font-family: Julius Sans One;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .container {
-    margin: auto;
+  margin: auto;
 }
 
 #goal {
-    font-size: 60px;
-    color: #fbfdee;
-    text-shadow: 2px 2px #96b6b5;
-    background: #e7e8e2;
-    border-radius: 50%;
-    padding: 30px 30 30 30;
+  font-size: 60px;
+  color: #fbfdee;
+  text-shadow: 2px 2px #96b6b5;
+  background: #e7e8e2;
+  border-radius: 50%;
+  padding: 30px 30 30 30;
 }
 
 #mute {
-    float: right;
+  float: right;
 }
 
-.mute {}
+.container {
+  padding-top: 6%;
+}
 
 @media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 48px;
-    }
-    p {
-        padding: 3px;
-        font-size: 23px;
-    }
-    .instructions {
-        font-family: Ropa Sans;
-        font-size: 10px;
-        /* font-weight: bold; */
-    }
-    .yum {
-        height: 150px;
-        width: 150px;
-        flex-wrap: nowrap;
-        display: inline-block;
-    }
-    .container {
-        padding: 2%;
-    }
-    .flex-container {
-        text-align: center
-    }
-    #goal {
-        padding: 0px auto;
-    }
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    padding: 3px;
+    font-size: 23px;
+  }
+  .instructions {
+    font-family: Ropa Sans;
+    font-size: 10px;
+    /* font-weight: bold; */
+  }
+  .yum {
+    height: 150px;
+    width: 150px;
+    flex-wrap: nowrap;
+    display: inline-block;
+  }
+  .container {
+    padding: 2%;
+  }
+  .flex-container {
+    text-align: center;
+  }
+  #goal {
+    padding: 0px auto;
+  }
 }
