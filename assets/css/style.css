@@ -10,10 +10,6 @@
   display: inline-block;
 }
 
-img {
-  /* object-fit: scale-down; */
-}
-
 h1 {
   font-family: Lobster;
   font-size: 70px;
